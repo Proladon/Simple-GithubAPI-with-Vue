@@ -6,8 +6,7 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="api_fetch.js"></script> -->
-    <title>Document</title>
+    <title>Simple Github User Query - Github API with Vue.js Demo</title>
 </head>
 <body>
     <div id="app">
@@ -16,7 +15,7 @@
             Oops! There's no guy named 「{{name}}」
         </p>
 
-        <input type="text" v-model="user" @keyup.enter="getuser">
+        <input type="text" v-model="user" @keyup.enter="getuser" placeholder="Github user name here">
         <button @click="getuser">GET</button>
 
         <p>ID: <span >{{id}}</span></p>
