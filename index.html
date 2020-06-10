@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="api_fetch.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img :src="img" alt="">
+        <input type="text" v-model="user">
+        <button @click="getuser(user)">GET</button>
+        
+        <p>ID: <span >{{id}}</span></p>
+        <p>Created Date: <span>{{created_date}}</span></p>
+        <p>Recent Update: <span>{{recent_update}}</span></p>
+    </div>
+    <script src="api_fetch.js"></script>
+</body>
+</html>
