@@ -12,10 +12,16 @@
 <body>
     <div id="app">
         <img :src="img" alt="">
-        <input type="text" v-model="user">
-        <button @click="getuser(user)">GET</button>
-        
+        <p class="none" :class="{err:none}">
+            Oops! There's no guy named 「{{name}}」
+        </p>
+
+        <input type="text" v-model="user" @keyup.enter="getuser">
+        <button @click="getuser">GET</button>
+
         <p>ID: <span >{{id}}</span></p>
+        <p>Followers: <span >{{followers}}</span></p>
+        <p>Github: <a :href="github" target="_blank" :class="{a_none:none}">{{github}}</a></p>
         <p>Created Date: <span>{{created_date}}</span></p>
         <p>Recent Update: <span>{{recent_update}}</span></p>
     </div>

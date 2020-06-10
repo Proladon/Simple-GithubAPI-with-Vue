@@ -1,3 +1,7 @@
+*{
+    font-family: consolas;
+}
+
 body{
     background-color: #333333;
 }
@@ -19,25 +23,40 @@ img{
 
 input{
     text-align: center;
-    margin-top: 30px;
-    width: 15%;
+    width: 20vw;
     height: 30px;
     background-color: #c8c8c8;
     border-radius: 20px;
     border: solid 2px aquamarine;
     outline: none;
-    font-family: consolas;
     font-size: 20px;
     text-decoration: none;
 }
 
+@media screen  and (max-width: 780px){
+    input{
+        text-align: center;
+        margin-top: 30px;
+        width: 60vw;
+        height: 30px;
+        background-color: #c8c8c8;
+        border-radius: 20px;
+        border: solid 2px aquamarine;
+        outline: none;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+
 button{
-    margin-top: 10px;
+    width: 50px;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     border: none;
     border-radius: 10px;
     background-color: aquamarine;
     outline: none;
-    font-family: consolas;
     transition: .1s;
 }
 
@@ -46,8 +65,15 @@ button:hover{
     transition: .1s;
 }
 
-p, span{
-    font-family: consolas;
+a{
+    color: skyblue;
+}
+
+.a_none{
+    pointer-events: none;
+    cursor: default;
+    color: aquamarine;
+    text-decoration: none;
 }
 
 p{
@@ -56,4 +82,14 @@ p{
 
 span{
     color: aquamarine;
+}
+
+.none{
+    visibility: collapse;
+}
+
+.err{
+    visibility: visible;
+    color: rgb(255, 105, 155);
+    text-align: center;
 }
